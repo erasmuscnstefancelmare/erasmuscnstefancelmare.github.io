@@ -1,0 +1,605 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Erasmus+ CNSCM: Mobilitatea 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <style>
+        p {
+            color: #001e36;
+        }
+
+        h3 {
+            color: #001e36;
+        }
+
+        h4 {
+            color: #fd9e01;
+        }
+
+        li {
+            color: #001e36;
+        }
+
+        a {
+            letter-spacing: 1px;
+            margin_top: 5px;
+        }
+
+        span {
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 3vw;
+            color: white;
+        }
+
+        @media screen and (min-width: 1200px) {
+            h1 {
+                font-size: 28px;
+                color: white;
+            }
+        } 
+
+        .spanCuloareText {
+            color: #34b2ff;
+            background-color: black;
+            opacity: 0.8;
+        }
+
+        .spanSimplu {
+            background-color: black;
+            opacity: 0.8;
+        }
+
+        .culoareAlbaText_a {
+            color: #34b2ff;
+        }
+
+        .darkenedImages {
+            filter: brightness(50%);
+        }
+
+        .topnav-right {
+            float: right;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .borderColorCyan {
+            color: #34b2ff;
+        }
+
+        .borderColorYellow {
+            color: #fd9e01;
+        }
+
+        .mySlides {
+            display:none;
+        }
+        
+        .divForNarrow{
+            margin-top: 5px;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        //codul ce urmeaza este exclusiv pentru imaginile
+        //cu modal
+        /* Style the Image Used to Trigger the Modal */
+        #myImg {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {opacity: 0.7;}
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        /* Modal Content (Image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image (Image Text) - Same Width as the Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+    </style>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-wide w3-padding w3-card" style = "background-color: #001e36;">
+            <div class="divForNarrow w3-left">
+                <a href="index.html">
+                    <i class="material-icons" style="font-size:36px; color:white;">arrow_back</i>
+                </a>
+            </div>
+            <img src="poze/utilitare/logoCNSCM.png" height = "45px">
+            <img src="poze/utilitare/europe_flag.png" height="35px">
+            <img src="poze/utilitare/erasmuslogotxt.png" height="30px">
+
+            <!-- Float links to the right. Hide them on small screens -->
+            <img class = "w3-hide-small w3-right" src="poze/utilitare/logo_erasmus.png" height = "45px">
+            <div class="w3-right w3-hide-medium w3-hide-small paddingPentruButoaneNavbar">
+                <a href="index.html" class="culoareAlbaText_a w3-bar-item w3-button">
+                    <b>Acasă</b>
+                </a>
+                <a href="#about" class="culoareAlbaText_a w3-bar-item w3-button">
+                    <b>Despre</b>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+        <!-- slideshow -->
+        <img class="darkenedImages mySlides w3-animate-opacity w3-image" src="poze/content/6oct2022/20221006_154536.jpg" width="1500" height="800">
+        <img class="darkenedImages mySlides w3-animate-opacity w3-image" src="poze/content/7oct2022/20221007_095709.jpg" width="1500" height="800">
+        <img class="darkenedImages mySlides w3-animate-opacity w3-image" src="poze/content/7oct2022/IMG-20221007-WA0007.jpg" width="1500" height="800">
+        <img class="darkenedImages mySlides w3-animate-opacity w3-image" src="poze/content/7oct2022/20221007_125303.jpg" width="1500" height="800">
+        <img class="darkenedImages mySlides w3-animate-opacity w3-image" src="poze/content/8oct2022/20221008_142841.jpg" width="1500" height="800">
+        <img class="darkenedImages mySlides w3-animate-opacity w3-image" src="poze/content/9oct2022/20221009_085338.jpg" width="1500" height="800">
+        <img class="darkenedImages mySlides w3-animate-opacity w3-image" src="poze/content/11oct2022/IMG-20221011-WA0028.jpg" width="1500" height="800">
+        
+        <div class="centered w3-margin-top w3-center">
+            <h1>
+                <!-- aici sunt -->
+                <span class="w3-animate-top w3-text-light-grey">
+                    <b><b><b>EXPERIENȚA&nbsp;<b class="borderColorCyan">ERASMUS+</b>&nbsp;2022 “Make&nbsp;technology&nbsp;your&nbsp;friend!” <b class = "borderColorYellow">Jurnal&nbsp;narativ&nbsp;-&nbsp;St.&nbsp;Julian's,&nbsp;Malta</b></b></b></b>
+                </span>
+            </h1>
+        </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width:1564px">
+
+        <!-- About Section -->
+        <div class="w3-container w3-padding-32" id="about">
+            <!--introducere-->
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">DESPRE</h3>  
+            <p>
+                În perioada 6-12 octombrie, s-a desfășurat cursul “Make technology your friend!” 
+                organizat în cadrul programului ERASMUS + : Formarea profesorilor pentru școala 
+                viitorului de tip digital , cu nr. 2022-1-RO01-KA122-SCH-000073682, în St. Julians, 
+                Malta, cu durata de 42 de ore. Reprezentanții Colegiului Național “Ștefan cel Mare” 
+                din Suceava au fost Carmen Amorăriței, Camelia Alexandriuc, Raluca Alexa și Cristian 
+                Amorăriței. 
+            </p>
+            <p>
+                A fost o experiență inedită și interesantă care merită împărtășită de fiecare cadru didactic.
+            </p>
+
+            <!-- miercuri/05 -->
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Miercuri - 5 octombrie</h4>
+            <p>
+                Prima zi din experința noastră în călătoria spre Malta a presupus o escală de aproximativ 
+                9 ore la Bergamo, un oraș vechi și superb, cu străduțe înguste pavate cu piatră cubică, 
+                două funiculare, ruinele unui castel vechi, un minunat peisaj medieval.  Farmecul 
+                “Orașului de Sus” este dat de Zidurile Venețiene,  brâu de piatră și cărămidă și de 
+                Piazza Vecchia - inima orașului vechi.
+            </p>
+
+            <!-- joi/06 -->
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Joi - 6 octombrie</h4>
+            <p>
+                Prima zi din activitatea noastră a presupus cunoașterea formatorului portughez 
+                Ricardo Querido Marques și a celorlalți participanți atât din țara noastră cât și 
+                din țările partenere Lituania și Ungaria. Cunoașterea a fost făcută printr-un joc 
+                antrenant, ca toate celelelte din zilele următoare, joc de spargere a gheții cu 
+                scopul de a reține numele celorlați participanți. Apoi am pășit cu emoții pentru 
+                prima dată la o activitate ERASMUS, spre cursul desfășurat într-o sală de conferințe 
+                a hotelului George Urban Boutique, unde  înarmându-ne cu laptopurile personale și multă 
+                curiozitate am început să descifrăm/aprofundăm frumusețea unor aplicații ca: 
+                ED SHELF, GOOGLE DRIVE, WORD ART, JAMBOARD și o aplicație care urma să fie 
+                tema următoarei întâlniri și anume PHOTO VOICE,  cu mențiunea că fotografia aleasă 
+                trebuia să fie făcută din excursia culturală ce urma să se desfășoare în ziua următoare.
+            </p>
+            <!-- ceva imagini -->
+            <div class="w3-row-padding">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/6oct2022/20221006_200349.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+               <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/6oct2022/20221006_200454.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/6oct2022/20221006_200720.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/6oct2022/20221006_201344.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+            </div>
+            <p>
+                După prânz am admirat orașelul St. Julian's și cele trei golfuri superbe din zonă: 
+                Golful Spinola, Golful Balluta și Golful St. George.
+            </p> 
+            <p>
+                Ziua nu s-a limitat doar la partea științifică din cursul dimineții, spre seară 
+                revenind pentru o activitate culturală în crae fiecare echipă și-a prezentat nu doar 
+                școala/colegiul unde funcționează ci și particularitățile educaționale, culturale, 
+                turistice, gastronomice ale zonei de proveniență. Seara s-a încheiat cu o tombolă în 
+                urma căreia fiecare participant a primit un suvenir specific celorlalte zone, crae să 
+                ne amintească de inedita experiență creată prin acest program ERASMUS. 
+            </p>
+
+            <!-- vineri/07 -->
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Vineri - 7 octombrie</h4>
+            <p>
+                În a doua zi a fost organizată o excursie de explorare a Maltei în deplina ei 
+                interculturalitate. Prima oprire a fost la Domul din Mosta, al treilea dom ca 
+                dimensiune din lume. Ineditul acestui sfânt lăcaș este că biserica a fost aproape 
+                să fie distrusă în timpul celui de-al Doilea război Mondial, la 9 aprilie 1942, 
+                când o bombă aeriană germană a străpuns cupola și a căzut în biserică în timpul slujbei, 
+                dar nu a explodat, fenomen interpretat de maltezi ca un miracol. A urmat Mdina, vechea 
+                capitală a statului Malta, oraș fortificat în regiunea de nord a  Maltei, o bijuterie 
+                istorică. În “Orașul Tăcut”, locuiesc doar familii nobile, 80 la număr, adică aproape 
+                300 de locuitori, toți descendenți ai unora dintre cele mai vechi familii de nobili din 
+                Malta. Blue groto a fost o experiență unică pentru simțul vizual, impresionându-ne prin 
+                apa albastră, uimitor de clară ce capătă reflexe uluitoare în razele soarelui. Marsaxlock 
+                - următoarea stație, este un mic sat traditional de pescari din regiunea de sud est a 
+                Maltei cunoscut pentru bărcile luzzu, foarte viu colorate și decorate în partea din față 
+                cu doi ochișori pictați (ochii lui Osiris) - conform celor auzite protejează pescarii de 
+                spiritele rele. Bineînțeles că nu puteam rata prânzul în acest loc, savurând peștele 
+                proapăt scos din mare. Ultima Oprire a fost la Hagar Qim - templu megalitic, care se 
+                numără printre cele mai vechi situri religioase de pe Pământ. Este format din 
+                6 temple construite în jurul anilor 3600-3200 Î. Hr., scoase la suprafață în 1839, 
+                deși templele nu au fost niciodată îngropate în totalitate.
+            </p>
+            <!-- ceva imagini -->
+            <div class="w3-row-padding">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/7oct2022/20221007_095709.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+               <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/7oct2022/20221007_110856.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/7oct2022/20221007_123900.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/7oct2022/IMG-20221007-WA0092.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+            </div>
+            <p>
+                O zi plină care ne-a permis să prindem gust pentru a continua explorarea frumuseții 
+                naturale și a minunilor realizate de oameni de-a lungul a mii de ani.
+            </p>
+
+            <!-- sambata/08 -->
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sâmbătă - 8 octombrie</h4>
+            <p>
+                Continuăm activitatea de formare, debutând cu prezentarea fotografiei în aplicația 
+                PHOTO VOICE realizată în excursia din ziua precedentă. A fost momentul care ne-a persmis 
+                să vedem excursia și prin ochii altor participanți. AplicațIILE cu care am continuat 
+                AU fost LIGHTCUT, MENTIMETER, KAHOOT, QR CODE MONKEY, CHATTERPIX. După activitatea 
+                de formare, care se desfășura în prima parte a zilei, ne-am propus să vizităm pe cont 
+                propriu Valletta - capitala Maltei, cea mai fortificată capitală din lume cu străzi 
+                romantice înguste și cu peste 30 de biserici, dintre care loc de frunte fiind Catedrala 
+                Sf. Ioan Botezătorul, o bijuterie arhitecturală, care este printre cele mai decorate 
+                biserici din Europa și care adăpostește cea mai importantă pânză: “Tăierea Capului Sf. 
+                Ioan Botezătorul”, opera lui Caravaggio. Un alt detaliu deosebit este podeaua de 
+                marmură compusă din aproape 400 de pietre funerare ale cavalerilor căzuți la datorie. 
+                În partea dreaptă aproape de intrarea în oraș se găsesc grădinile Upper Barrakka, cel 
+                mai înalt punct al Vallettei, ce oferă o splendidă priveliște, unde în fiecare zi la 
+                orele 12.00 și 16.00 se trag focuri de tun.
+            </p>
+            <!-- ceva imagini -->
+            <div class="w3-row-padding">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/8oct2022/20221008_142841.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+               <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/8oct2022/20221008_152551.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/8oct2022/20221008_150900.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/8oct2022/20221008_172255.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- duminica/09 -->
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Duminică - 9 octombrie</h4>
+            <p>
+                Ziua a început cu prezentarea afișelor realizate de către colegii noștri dintr-o 
+                altă grupă, a proiectelor, în cadrul unei activități outdoor și recunoașterea de 
+                către noi a mesajului transmis. Apoi în continuarea programului: MINDOMO, GENIALLY 
+                aplicație care s-a finalizat cu o temă în care ne-am prezentat unitatea de învățământ. 
+            </p>
+            <!-- ceva imagini -->
+            <div class="w3-row-padding">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/9oct2022/20221009_085338.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+               <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/9oct2022/20221009_090748.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/9oct2022/20221009_091544.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/9oct2022/20221009_094807.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+            </div>
+            <p>
+                Ziua a continuat cu explorarea Paceville, o zonă a orașului St. Julian's.
+            </p>
+
+            <!-- luni/10 -->
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Luni - 10 octombrie</h4>
+            <p>
+                Continuăm cu noi aplicații: PREZZI, CANVA, BOOKCREATOR, STORYJUMPER.
+            </p>
+            <!-- ceva imagini -->
+            <div class="w3-row-padding">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/10oct2022/20221010_091133.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+               <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/11oct2022/20221011_093832.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/10oct2022/20221010_175720.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/10oct2022/20221010_181346.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+            </div>
+            <p>
+                În a doua parte a zilei am străbătut la pas Sliema, un modern și elegant centru turistic, 
+                cu o promenadă de 3 km lungime, împânzită de parcuri, golfuri, cu plaje stâncoase de-a 
+                lungul căreia se găsesc și Băile Romane - o atracție a zonei reprezentată de un soi 
+                de piscine naturale.
+            </p>
+            
+            <!-- marti/11 -->
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Marți - 11 octombrie</h4>
+            <p>
+                O nouă zi și o nouă provocare: vizita la ESPLORA INTERACTIVE SCIENCE CENTRE, 
+                centru de expoziții interactive de știință și tehnologie, cu un planetarium și 
+                programe de teatru educațional. Aici am petrecut momente antrenante și interactive 
+                pentru fiecare știință în parte, insuficiente ca timp față de cât ne-am fi dorit 
+                și cu promisiunea de a împărtăși și elevilor noștri această experiență a științei 
+                aplicate.
+            </p>
+            <!-- ceva imagini -->
+            <div class="w3-row-padding">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/11oct2022/20221011_120335.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+               <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/11oct2022/20221011_131841.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/11oct2022/20221011_144748.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/11oct2022/IMG-20221011-WA0028.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+            </div>
+            <p>
+                Spre seară ne-am îndreptat spre Mosta într-un mod organizat să celebrăm “Seara malteză”, 
+                într-un restaurant authentic din 1964 “Ta' Marija”, momente care ne-au permis să 
+                degustăm din arta culinară malteză, să interacționăm și altfel, să cunoaștem tradiții 
+                malteze și turiști din toate colțurile lumii. 
+            </p>
+
+            <!-- miercuri/12 -->
+            <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Miercuri - 12 octombrie</h4>
+            <p>
+                Cum ne-a mai rămas un obiectiv de atins – insula Gozo, am pornit în explorarea acesteia. 
+                Insula Gozo este a doua insulă ca mărime din arhipelagul maltez, unde am ales să o 
+                parcurgem din confortul autobuzelor de tip hop on hop off, care oferă ghid audio și 
+                posibilitatea de a coborî în orice stație și de a vizita obiectivele ce prezintă 
+                interes pentru fiecare în parte. Cel mai impresionant obiectiv a fost Biserica Ta' Pinu, 
+                recunoscută inclusiv de Vatican ca fiind făcătoare de minuni. O altă oprire a fost 
+                orașul Victoria (Rabat), capitala insulei cu principala atracție Cittadella, o cetate 
+                fortificată, cu străzi pietruite și înguste ce oferă o priveliște minunată. O ultimă 
+                oprire a fost la Rambla Bay, celebra plajă cunoscută în lumea întreagă pentru nisipul 
+                său special de culoare roșiatică.
+            </p>
+            <!-- ceva imagini -->
+            <div class="w3-row-padding">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/12oct2022/20221012_100220.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+               <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/12oct2022/20221012_132220.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/12oct2022/20221012_172247.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                            <img id="myImg" src="poze/content/12oct2022/20221012_161244.jpg" style="width:100%" onclick="onClick(this)">
+                    </div>
+                </div>
+            </div>
+            <p> 
+                Așa s-au încheiat cele 7 zile pline de activități intense, interactive, interculturale 
+                care ne-au motivate să participăm și pe viitor la astfel de programe, dar mai ales să-i 
+                încurajăm și pe colegii noștri să participle.  
+            </p>
+
+            <p align="right">
+                Profesori: Amorăriței Carmen, Alexandriuc Camelia,  Alexa Raluca, Amorăriței Cristian 
+            </p>
+
+        </div>
+        <!-- End page content -->
+    </div>
+
+    <!-- Trigger the Modal -->
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption"></p>
+        </div>
+    </div>
+
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-center w3-padding-16" style = "background-color: #001e36;">
+        <p class="w3-small w3-text-light-grey">This website was made by Raul-Emmanuel Oanea & Sebastian-George Sincari</p>
+        <!-- Footer end. -->
+    </footer>
+
+    <!-- script for automatic slideshow -->
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+        
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+</body>
+
+</html>
